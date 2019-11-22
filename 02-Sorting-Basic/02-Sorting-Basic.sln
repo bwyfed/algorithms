@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "01-Selection-Sort", "01-Sel
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "02-Selection-Sort-Using-Template", "02-Selection-Sort-Using-Template\02-Selection-Sort-Using-Template.vcxproj", "{8769F51B-9A99-43F4-A598-BAB0C384667E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "03-Selection-Sort-Generate-Test-Cases", "03-Selection-Sort-Generate-Test-Cases\03-Selection-Sort-Generate-Test-Cases.vcxproj", "{529F7EFB-453E-43A3-B55E-C8BADAC95065}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{8769F51B-9A99-43F4-A598-BAB0C384667E}.Release|x64.Build.0 = Release|x64
 		{8769F51B-9A99-43F4-A598-BAB0C384667E}.Release|x86.ActiveCfg = Release|Win32
 		{8769F51B-9A99-43F4-A598-BAB0C384667E}.Release|x86.Build.0 = Release|Win32
+		{529F7EFB-453E-43A3-B55E-C8BADAC95065}.Debug|x64.ActiveCfg = Debug|x64
+		{529F7EFB-453E-43A3-B55E-C8BADAC95065}.Debug|x64.Build.0 = Debug|x64
+		{529F7EFB-453E-43A3-B55E-C8BADAC95065}.Debug|x86.ActiveCfg = Debug|Win32
+		{529F7EFB-453E-43A3-B55E-C8BADAC95065}.Debug|x86.Build.0 = Debug|Win32
+		{529F7EFB-453E-43A3-B55E-C8BADAC95065}.Release|x64.ActiveCfg = Release|x64
+		{529F7EFB-453E-43A3-B55E-C8BADAC95065}.Release|x64.Build.0 = Release|x64
+		{529F7EFB-453E-43A3-B55E-C8BADAC95065}.Release|x86.ActiveCfg = Release|Win32
+		{529F7EFB-453E-43A3-B55E-C8BADAC95065}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
