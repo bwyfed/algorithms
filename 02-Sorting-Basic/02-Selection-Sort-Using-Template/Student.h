@@ -9,7 +9,9 @@ struct Student {
 	int score;
 
 	bool operator<(const Student &otherStudent) {
-		return score > otherStudent.score;
+		//return score > otherStudent.score;
+		// 自定义比较：先比较分数，再比较名字的字典序
+		return score != otherStudent.score ? score > otherStudent.score : name < otherStudent.name;
 	}
 	friend ostream& operator<<(ostream &os, const Student &student) {
 		os << "Student: " << student.name << " " << student.score << endl;
