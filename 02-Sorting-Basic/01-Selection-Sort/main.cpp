@@ -2,7 +2,7 @@
 using namespace std;
 
 void selectionSort(int arr[], int n) {
-	for (int i = 0; i < n; i++) {
+	for (int i = 0; i < n; i++) { // 外层条件也可以写成i < n-1，前n-1个元素的顺序确定了，最后一个元素位置也确定了
 		// 寻找[i, n)区间里的最小值
 		int minIndex = i;
 		for (int j = i + 1; j < n; j++)
