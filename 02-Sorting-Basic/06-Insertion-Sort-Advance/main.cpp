@@ -19,6 +19,7 @@ void insertionSort(T arr[], int n) {
 }
 int main() {
 	int n = 10000; //数组中元素的个数
+//	int *arr = SortTestHelper::generateRandomArray(n, 0, 3);
 	int *arr = SortTestHelper::generateNearlyOrderedArray(n, 10);
 	int *arr2 = SortTestHelper::copyIntArray(arr, n);
 

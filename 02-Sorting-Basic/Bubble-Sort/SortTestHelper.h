@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <string>
 #include <ctime>
 #include <cassert>
 using namespace std;
@@ -13,6 +14,21 @@ namespace SortTestHelper {
 		// 设置n个随机数
 		for (int i = 0; i < n; i++)
 			arr[i] = rand() % (rangeR - rangeL + 1) + rangeL;
+		return arr;
+	}
+	// 生成一个近似有序的数组
+	int* generateNearlyOrderedArray(int n, int swapTimes) {
+		int *arr = new int[n];
+		// 首先生成完全有序的随机数
+		for (int i = 0; i < n; i++)
+			arr[i] = i;
+		// 随机的挑选几对元素进行交换
+		srand(time(NULL));
+		for (int i = 0; i < swapTimes; i++) {
+			int posx = rand() % n;
+			int posy = rand() % n;
+			swap(arr[posx], arr[posy]);
+		}
 		return arr;
 	}
 
@@ -43,7 +59,7 @@ namespace SortTestHelper {
 	// 拷贝一个数组并返回
 	int* copyIntArray(int a[], int n) {
 		int* arr = new int[n];
-		copy(a, a + n, arr); // 使用std里的copy函数
+		copy(a, a + n, arr);
 		return arr;
 	}
 }
