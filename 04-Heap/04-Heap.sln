@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "02-Max-Heap-Class-Basic", "
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "03-Shift-Up", "03-Shift-Up\03-Shift-Up.vcxproj", "{34AFBBA4-3182-4575-91C8-48D016FF72C6}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "04-Shift-Down", "04-Shift-Down\04-Shift-Down.vcxproj", "{2C7248A4-627D-4759-AA07-5732DEFF780C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{34AFBBA4-3182-4575-91C8-48D016FF72C6}.Release|x64.Build.0 = Release|x64
 		{34AFBBA4-3182-4575-91C8-48D016FF72C6}.Release|x86.ActiveCfg = Release|Win32
 		{34AFBBA4-3182-4575-91C8-48D016FF72C6}.Release|x86.Build.0 = Release|Win32
+		{2C7248A4-627D-4759-AA07-5732DEFF780C}.Debug|x64.ActiveCfg = Debug|x64
+		{2C7248A4-627D-4759-AA07-5732DEFF780C}.Debug|x64.Build.0 = Debug|x64
+		{2C7248A4-627D-4759-AA07-5732DEFF780C}.Debug|x86.ActiveCfg = Debug|Win32
+		{2C7248A4-627D-4759-AA07-5732DEFF780C}.Debug|x86.Build.0 = Debug|Win32
+		{2C7248A4-627D-4759-AA07-5732DEFF780C}.Release|x64.ActiveCfg = Release|x64
+		{2C7248A4-627D-4759-AA07-5732DEFF780C}.Release|x64.Build.0 = Release|x64
+		{2C7248A4-627D-4759-AA07-5732DEFF780C}.Release|x86.ActiveCfg = Release|Win32
+		{2C7248A4-627D-4759-AA07-5732DEFF780C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
