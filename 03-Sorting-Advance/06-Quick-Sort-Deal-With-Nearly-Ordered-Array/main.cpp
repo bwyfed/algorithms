@@ -41,6 +41,7 @@ void __quickSort(T arr[], int l, int r) {
 
 template <typename T>
 void quickSort(T arr[], int n) {
+	srand(time(NULL)); // 设置随机种子
 	__quickSort(arr, 0, n - 1);
 }
 int main() {
