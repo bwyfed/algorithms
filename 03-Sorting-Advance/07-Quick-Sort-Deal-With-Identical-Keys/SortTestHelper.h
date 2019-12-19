@@ -53,7 +53,7 @@ namespace SortTestHelper {
 		sort(arr, n);
 		clock_t endTime = clock();
 		// 验证数组是否有序
-		//assert(isSorted(arr, n));
+		assert(isSorted(arr, n));
 		cout << sortName << " : " << double(endTime - startTime) / CLOCKS_PER_SEC << " s" << endl;
 	}
 	// 拷贝一个数组并返回
