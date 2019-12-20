@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{E433BD40-BC6F-41B7-B59D-07B4D1740EEE}</ProjectGuid>
-    <RootNamespace>My06HeapSort</RootNamespace>
+    <ProjectGuid>{711CC9CA-E02C-438B-A4FC-F77DCEB701B5}</ProjectGuid>
+    <RootNamespace>My08IndexHeap</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -116,9 +116,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="Heap.h" />
     <ClInclude Include="HeapSort.h" />
     <ClInclude Include="InsertionSort.h" />
@@ -127,6 +124,9 @@
     <ClInclude Include="QuickSort2Ways.h" />
     <ClInclude Include="QuickSort3Ways.h" />
     <ClInclude Include="SortTestHelper.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

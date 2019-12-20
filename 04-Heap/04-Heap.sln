@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "05-Heapify", "05-Heapify\05
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "06-Heap-Sort", "06-Heap-Sort\06-Heap-Sort.vcxproj", "{E433BD40-BC6F-41B7-B59D-07B4D1740EEE}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "08-Index-Heap", "08-Index-Heap\08-Index-Heap.vcxproj", "{711CC9CA-E02C-438B-A4FC-F77DCEB701B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -61,6 +63,14 @@ Global
 		{E433BD40-BC6F-41B7-B59D-07B4D1740EEE}.Release|x64.Build.0 = Release|x64
 		{E433BD40-BC6F-41B7-B59D-07B4D1740EEE}.Release|x86.ActiveCfg = Release|Win32
 		{E433BD40-BC6F-41B7-B59D-07B4D1740EEE}.Release|x86.Build.0 = Release|Win32
+		{711CC9CA-E02C-438B-A4FC-F77DCEB701B5}.Debug|x64.ActiveCfg = Debug|x64
+		{711CC9CA-E02C-438B-A4FC-F77DCEB701B5}.Debug|x64.Build.0 = Debug|x64
+		{711CC9CA-E02C-438B-A4FC-F77DCEB701B5}.Debug|x86.ActiveCfg = Debug|Win32
+		{711CC9CA-E02C-438B-A4FC-F77DCEB701B5}.Debug|x86.Build.0 = Debug|Win32
+		{711CC9CA-E02C-438B-A4FC-F77DCEB701B5}.Release|x64.ActiveCfg = Release|x64
+		{711CC9CA-E02C-438B-A4FC-F77DCEB701B5}.Release|x64.Build.0 = Release|x64
+		{711CC9CA-E02C-438B-A4FC-F77DCEB701B5}.Release|x86.ActiveCfg = Release|Win32
+		{711CC9CA-E02C-438B-A4FC-F77DCEB701B5}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
