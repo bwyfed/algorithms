@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Heap.h"
+#include "HeapSort.h"
 #include "MergeSort.h"
 #include "QuickSort.h"
 #include "QuickSort3Ways.h"
@@ -8,19 +9,27 @@
 using namespace std;
 
 template<typename T>
-void heapSort1(T arr[], int n) {
-	MaxHeap<T> maxheap = MaxHeap<T>(n);
-	for (int i = 0; i < n; i++)
-		maxheap.insert(arr[i]);
-	for (int i = n - 1; i >= 0; i--)
-		arr[i] = maxheap.extractMax();
+void __shiftDown(T arr[], int n, int k) {
+	while (2 * k + 1 < n) { // 判断是否有左孩子
+		int j = 2 * k + 1; // 在此轮循环中，arr[k]和arr[j]交换位置
+		if (j + 1 < n && arr[j + 1] > arr[j]) // 判断右孩子和左孩子的大小关系
+			j += 1;
+		if (arr[k] >= arr[j])
+			break;
+		swap(arr[k], arr[j]);
+		k = j;
+	}
 }
 
 template<typename T>
-void heapSort2(T arr[], int n) {
-	MaxHeap<T> maxheap = MaxHeap<T>(arr, n);
-	for (int i = n - 1; i >= 0; i--)
-		arr[i] = maxheap.extractMax();
+void heapSort(T arr[], int n) {
+	// heapify
+	for (int i = (n - 1) / 2; i >= 0; i--)
+		__shiftDown(arr, n, i);
+	for (int i = n - 1; i > 0; i--) {
+		swap(arr[0], arr[i]);
+		__shiftDown(arr, i, 0);
+	}
 }
 int main() {
 	int n = 1000000;
@@ -31,18 +40,21 @@ int main() {
 	int* arr3 = SortTestHelper::copyIntArray(arr1, n);
 	int* arr4 = SortTestHelper::copyIntArray(arr1, n);
 	int* arr5 = SortTestHelper::copyIntArray(arr1, n);
+	int* arr6 = SortTestHelper::copyIntArray(arr1, n);
 
 	SortTestHelper::testSort("Merge Sort", mergeSort, arr1, n);
 	SortTestHelper::testSort("Quick Sort", quickSort, arr2, n);
 	SortTestHelper::testSort("Quick Sort 3 Ways", quickSort3Ways, arr3, n);
 	SortTestHelper::testSort("Heap Sort 1", heapSort1, arr4, n);
 	SortTestHelper::testSort("Heap Sort 2", heapSort2, arr5, n);
+	SortTestHelper::testSort("Heap Sort 3", heapSort, arr6, n);
 
 	delete[] arr1;
 	delete[] arr2;
 	delete[] arr3;
 	delete[] arr4;
 	delete[] arr5;
+	delete[] arr6;
 
 	cout << endl;
 
@@ -54,18 +66,21 @@ int main() {
 	arr3 = SortTestHelper::copyIntArray(arr1, n);
 	arr4 = SortTestHelper::copyIntArray(arr1, n);
 	arr5 = SortTestHelper::copyIntArray(arr1, n);
+	arr6 = SortTestHelper::copyIntArray(arr1, n);
 
 	SortTestHelper::testSort("Merge Sort", mergeSort, arr1, n);
 	SortTestHelper::testSort("Quick Sort", quickSort, arr2, n);
 	SortTestHelper::testSort("Quick Sort 3 Ways", quickSort3Ways, arr3, n);
 	SortTestHelper::testSort("Heap Sort 1", heapSort1, arr4, n);
 	SortTestHelper::testSort("Heap Sort 2", heapSort2, arr5, n);
+	SortTestHelper::testSort("Heap Sort 3", heapSort, arr6, n);
 
 	delete[] arr1;
 	delete[] arr2;
 	delete[] arr3;
 	delete[] arr4;
 	delete[] arr5;
+	delete[] arr6;
 
 	cout << endl;
 	// 测试3: 测试有大量重复数据的数组
@@ -75,18 +90,21 @@ int main() {
 	arr3 = SortTestHelper::copyIntArray(arr1, n);
 	arr4 = SortTestHelper::copyIntArray(arr1, n);
 	arr5 = SortTestHelper::copyIntArray(arr1, n);
+	arr6 = SortTestHelper::copyIntArray(arr1, n);
 
 	SortTestHelper::testSort("Merge Sort", mergeSort, arr1, n);
 	SortTestHelper::testSort("Quick Sort", quickSort, arr2, n);
 	SortTestHelper::testSort("Quick Sort 3 Ways", quickSort3Ways, arr3, n);
 	SortTestHelper::testSort("Heap Sort 1", heapSort1, arr4, n);
 	SortTestHelper::testSort("Heap Sort 2", heapSort2, arr5, n);
+	SortTestHelper::testSort("Heap Sort 3", heapSort, arr6, n);
 
 	delete[] arr1;
 	delete[] arr2;
 	delete[] arr3;
 	delete[] arr4;
 	delete[] arr5;
+	delete[] arr6;
 
 	return 0;
 }
