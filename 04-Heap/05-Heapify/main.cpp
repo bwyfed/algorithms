@@ -1,74 +1,76 @@
 #include <iostream>
-#include <ctime>
-#include <cassert>
-#include <algorithm>
-#include <string>
+#include "Heap.h"
+#include "MergeSort.h"
+#include "QuickSort.h"
+#include "QuickSort3Ways.h"
+#include "SortTestHelper.h"
+
 using namespace std;
 
-template<typename Item>
-class MaxHeap {
-private:
-	Item *data;
-	int count; // 堆中有多少个元素
-	int capacity;
-	// 将k索引位置的元素向上移动，维持堆的定义
-	void shiftUp(int k) {
-		while (k > 1 && data[k / 2] < data[k]) {
-			swap(data[k / 2], data[k]);
-			k /= 2;
-		}
-	}
-	void shiftDown(int k) {
-		while ( 2*k <= count ) {
-			int j = 2 * k; // 在此轮循环中，data[k]和data[j]交换位置
-			if (j + 1 <= count && data[j + 1] > data[j])
-				j += 1;
-			if (data[k] >= data[j])
-				break;
-			swap(data[k], data[j]);
-			k = j;
-		}
-	}
-public:
-	MaxHeap(int capacity) {
-		data = new Item[capacity + 1];
-		count = 0;
-		this->capacity = capacity;
-	}
-	~MaxHeap() {
-		delete[] data;
-	}
-	int size() {
-		return count;
-	}
-	bool isEmpty() {
-		return count == 0;
-	}
-	void insert(Item item) {
-		assert(count + 1 <= capacity);
-		data[count + 1] = item;
-		count++;
-		shiftUp(count);
-	}
-	Item extractMax() {
-		assert(count > 0);
-		Item ret = data[1];
-		swap(data[1], data[count]);
-		count--;
-		shiftDown(1);
-		return ret;
-	}
-};
+template<typename T>
+void heapSort1(T arr[], int n) {
+	MaxHeap<T> maxheap = MaxHeap<T>(n);
+	for (int i = 0; i < n; i++)
+		maxheap.insert(arr[i]);
+	for (int i = n - 1; i >= 0; i--)
+		arr[i] = maxheap.extractMax();
+}
 int main() {
-	MaxHeap<int> maxheap = MaxHeap<int>(100);
-//	cout << maxheap.size() << endl;
+	int n = 1000000;
+	// 测试1 一般性测试，随机数组
+	cout << "Test for Random Array, size = " << n << ", random range [0, " << n << "]" << endl;
+	int* arr1 = SortTestHelper::generateRandomArray(n, 0, n);
+	int* arr2 = SortTestHelper::copyIntArray(arr1, n);
+	int* arr3 = SortTestHelper::copyIntArray(arr1, n);
+	int* arr4 = SortTestHelper::copyIntArray(arr1, n);
 
-	srand(time(NULL));
-	for (int i = 0; i < 50; i++)
-		maxheap.insert(rand() % 100);
-	while (!maxheap.isEmpty())
-		cout << maxheap.extractMax() << " ";
+	SortTestHelper::testSort("Merge Sort", mergeSort, arr1, n);
+	SortTestHelper::testSort("Quick Sort", quickSort, arr2, n);
+	SortTestHelper::testSort("Quick Sort 3 Ways", quickSort3Ways, arr3, n);
+	SortTestHelper::testSort("Heap Sort 1", heapSort1, arr4, n);
+
+	delete[] arr1;
+	delete[] arr2;
+	delete[] arr3;
+	delete[] arr4;
+
 	cout << endl;
+
+	// 测试2: 测试近乎有序的数组
+	int swapTimes = 100;
+	cout << "Test for Random Nearly Ordered Array, size = " << n << ", swap time = " << swapTimes << endl;
+	arr1 = SortTestHelper::generateNearlyOrderedArray(n, swapTimes);
+	arr2 = SortTestHelper::copyIntArray(arr1, n);
+	arr3 = SortTestHelper::copyIntArray(arr1, n);
+	arr4 = SortTestHelper::copyIntArray(arr1, n);
+
+	SortTestHelper::testSort("Merge Sort", mergeSort, arr1, n);
+	SortTestHelper::testSort("Quick Sort", quickSort, arr2, n);
+	SortTestHelper::testSort("Quick Sort 3 Ways", quickSort3Ways, arr3, n);
+	SortTestHelper::testSort("Heap Sort 1", heapSort1, arr4, n);
+
+	delete[] arr1;
+	delete[] arr2;
+	delete[] arr3;
+	delete[] arr4;
+
+	cout << endl;
+	// 测试3: 测试有大量重复数据的数组
+	cout << "Test for Random Array, size = " << n << ", random range [0, 10]" << endl;
+	arr1 = SortTestHelper::generateRandomArray(n, 0, 10);
+	arr2 = SortTestHelper::copyIntArray(arr1, n);
+	arr3 = SortTestHelper::copyIntArray(arr1, n);
+	arr4 = SortTestHelper::copyIntArray(arr1, n);
+
+	SortTestHelper::testSort("Merge Sort", mergeSort, arr1, n);
+	SortTestHelper::testSort("Quick Sort", quickSort, arr2, n);
+	SortTestHelper::testSort("Quick Sort 3 Ways", quickSort3Ways, arr3, n);
+	SortTestHelper::testSort("Heap Sort 1", heapSort1, arr4, n);
+
+	delete[] arr1;
+	delete[] arr2;
+	delete[] arr3;
+	delete[] arr4;
 
 	return 0;
 }
