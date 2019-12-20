@@ -11,14 +11,12 @@ class MaxHeap {
 private:
 	Item *data;
 	int count; // 堆中有多少个元素
-	int capacity;
 
 public:
 	// 构造函数, 构造一个空堆, 可容纳capacity个元素
 	MaxHeap(int capacity) {
 		data = new Item[capacity + 1];
 		count = 0;
-		this->capacity = capacity;
 	}
 	~MaxHeap() {
 		delete[] data;
@@ -30,11 +28,6 @@ public:
 	// 返回一个布尔值, 表示堆中是否为空
 	bool isEmpty() {
 		return count == 0;
-	}
-	void insert(Item item) {
-		assert(count + 1 <= capacity);
-		data[count + 1] = item;
-		shiftUp(count);
 	}
 };
 int main() {
