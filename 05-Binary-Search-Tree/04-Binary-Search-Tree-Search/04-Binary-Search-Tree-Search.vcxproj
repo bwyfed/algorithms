@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{3646CD93-9FC3-44CE-A4BA-009CAD4CDA6C}</ProjectGuid>
-    <RootNamespace>My03BinarySearchTreeInsert</RootNamespace>
+    <ProjectGuid>{6312E23D-AEF6-4953-A6A3-4C86184ABA73}</ProjectGuid>
+    <RootNamespace>My04BinarySearchTreeSearch</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -124,6 +124,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="bible.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FileOps.h" />
+    <ClInclude Include="SequenceST.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
