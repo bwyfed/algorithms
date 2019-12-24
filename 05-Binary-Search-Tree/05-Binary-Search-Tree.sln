@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "04-Binary-Search-Tree-Searc
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "05-Binary-Search-Tree-Traverse", "05-Binary-Search-Tree-Traverse\05-Binary-Search-Tree-Traverse.vcxproj", "{14DFE30D-F38A-4559-93E1-00616535FCDE}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "06-Binary-Search-Tree-Level-Traverse", "06-Binary-Search-Tree-Level-Traverse\06-Binary-Search-Tree-Level-Traverse.vcxproj", "{B70F4370-6498-4B9E-9ED1-5B440EAA0B5C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -61,6 +63,14 @@ Global
 		{14DFE30D-F38A-4559-93E1-00616535FCDE}.Release|x64.Build.0 = Release|x64
 		{14DFE30D-F38A-4559-93E1-00616535FCDE}.Release|x86.ActiveCfg = Release|Win32
 		{14DFE30D-F38A-4559-93E1-00616535FCDE}.Release|x86.Build.0 = Release|Win32
+		{B70F4370-6498-4B9E-9ED1-5B440EAA0B5C}.Debug|x64.ActiveCfg = Debug|x64
+		{B70F4370-6498-4B9E-9ED1-5B440EAA0B5C}.Debug|x64.Build.0 = Debug|x64
+		{B70F4370-6498-4B9E-9ED1-5B440EAA0B5C}.Debug|x86.ActiveCfg = Debug|Win32
+		{B70F4370-6498-4B9E-9ED1-5B440EAA0B5C}.Debug|x86.Build.0 = Debug|Win32
+		{B70F4370-6498-4B9E-9ED1-5B440EAA0B5C}.Release|x64.ActiveCfg = Release|x64
+		{B70F4370-6498-4B9E-9ED1-5B440EAA0B5C}.Release|x64.Build.0 = Release|x64
+		{B70F4370-6498-4B9E-9ED1-5B440EAA0B5C}.Release|x86.ActiveCfg = Release|Win32
+		{B70F4370-6498-4B9E-9ED1-5B440EAA0B5C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
