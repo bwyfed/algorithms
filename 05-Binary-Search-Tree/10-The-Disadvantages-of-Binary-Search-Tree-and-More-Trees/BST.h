@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include <queue>
 #include <cassert>
@@ -253,14 +254,11 @@ private:
 			successor->right = removeMin(node->right);
 			successor->left = node->left;
 
-//			delete delNode;
+			//			delete delNode;
 			delete node;
 			count--;
 			return successor;
 		}
 	}
-	
+
 };
-int main() {
-	return 0;
-}
