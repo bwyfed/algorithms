@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{1291A8DC-56F6-487B-9E99-1794F1D1EBA5}</ProjectGuid>
-    <RootNamespace>My07BinarySearchTreeRemoveMinandMax</RootNamespace>
+    <ProjectGuid>{EB4E726C-7974-44D7-A6C0-E551A147D64D}</ProjectGuid>
+    <RootNamespace>My08BinarySearchTreeRemove</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
